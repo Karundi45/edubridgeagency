@@ -1,0 +1,474 @@
+{
+  "common": {
+    "appName": "EduBridge Agency",
+    "tagline": "Découvrez des Opportunités. Construisez Votre Avenir.",
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher des bourses, universités, pays, domaines...",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "register": "Créer un compte",
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "saved": "Sauvegardés",
+    "applications": "Candidatures",
+    "notifications": "Notifications",
+    "adminDashboard": "Tableau de bord Admin",
+    "back": "Retour",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "share": "Partager",
+    "submit": "Soumettre",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès",
+    "required": "Obligatoire",
+    "optional": "Facultatif",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "seeAll": "Voir tout",
+    "noResults": "Aucun résultat trouvé",
+    "tryAgain": "Réessayer",
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "nav": {
+    "home": "Accueil",
+    "scholarships": "Bourses",
+    "opportunities": "Opportunités",
+    "resources": "Ressources",
+    "about": "À propos",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "home": {
+    "hero": {
+      "headline": "Trouvez des Bourses. Changez Votre Avenir.",
+      "subheadline": "EduBridge Agency aide les étudiants à découvrir des bourses, des opportunités éducatives et des ressources pour construire un avenir meilleur.",
+      "searchPlaceholder": "Rechercher des bourses, universités, pays, domaines d'études...",
+      "cta1": "Trouver des Opportunités",
+      "cta2": "Explorer les Bourses",
+      "trust1": "15 000+ étudiants aidés",
+      "trust2": "Opportunités vérifiées",
+      "trust3": "Gratuit"
+    },
+    "stats": {
+      "title": "Reconnu par des Étudiants à travers l'Afrique et au-delà",
+      "scholarships": "Bourses disponibles",
+      "opportunities": "Opportunités totales",
+      "countries": "Pays",
+      "fields": "Domaines d'études",
+      "students": "Étudiants atteints"
+    },
+    "featured": {
+      "title": "Bourses à la une",
+      "subtitle": "Opportunités sélectionnées et vérifiées par notre équipe",
+      "viewAll": "Voir toutes les bourses"
+    },
+    "latest": {
+      "title": "Dernières Opportunités",
+      "subtitle": "Bourses, fellowships et plus ajoutés récemment"
+    },
+    "closingSoon": {
+      "title": "Fermeture Imminente",
+      "subtitle": "Agissez vite — ces opportunités se ferment bientôt",
+      "daysLeft": "{days} jours restants",
+      "closingTomorrow": "Fermeture demain",
+      "closingToday": "Fermeture aujourd'hui !",
+      "closed": "Fermé"
+    },
+    "byDegree": {
+      "title": "Par Niveau d'Études",
+      "subtitle": "Trouvez des opportunités correspondant à votre niveau académique"
+    },
+    "byFunding": {
+      "title": "Par Type de Financement",
+      "subtitle": "Trouvez le soutien financier adapté à vos études"
+    },
+    "byField": {
+      "title": "Par Domaine d'Études",
+      "subtitle": "Explorez les opportunités dans votre domaine de spécialisation"
+    },
+    "byCountry": {
+      "title": "Par Pays",
+      "subtitle": "Trouvez des opportunités dans votre destination préférée",
+      "allCountries": "Tous les pays"
+    },
+    "howItWorks": {
+      "title": "Comment fonctionne EduBridge Agency",
+      "subtitle": "Votre chemin vers les opportunités éducatives et professionnelles en 4 étapes simples",
+      "step1Title": "Créez Votre Profil",
+      "step1Desc": "Parlez à EduBridge Agency de vos études, intérêts et objectifs pour recevoir des recommandations personnalisées.",
+      "step2Title": "Découvrez des Opportunités",
+      "step2Desc": "Parcourez des milliers de bourses internationales, fellowships et offres d'emploi locales au Rwanda.",
+      "step3Title": "Vérifiez Votre Compatibilité",
+      "step3Desc": "Voyez dans quelle mesure chaque opportunité correspond à votre profil et ce que vous devez préparer.",
+      "step4Title": "Postulez et Suivez",
+      "step4Desc": "Suivez le processus de candidature officiel sur le site du prestataire ou de l'employeur, et suivez vos progrès dans votre tableau de bord."
+    },
+    "testimonials": {
+      "title": "Témoignages d'Étudiants",
+      "subtitle": "De vrais étudiants. De vraies opportunités. Un vrai impact.",
+      "disclaimer": "* Les témoignages sont des exemples représentatifs. Les résultats varient."
+    },
+    "newsletter": {
+      "title": "Recevez des Opportunités de Bourses dans Votre Boîte Mail",
+      "subtitle": "Rejoignez des milliers d'étudiants qui reçoivent chaque semaine des alertes de bourses sélectionnées.",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "votre@email.com",
+      "countryLabel": "Votre pays",
+      "degreeLabel": "Niveau d'études souhaité",
+      "fieldLabel": "Domaine préféré",
+      "cta": "S'abonner gratuitement",
+      "privacy": "Pas de spam. Désabonnement à tout moment.",
+      "success": "Vous êtes abonné ! Vérifiez votre boîte mail pour une confirmation.",
+      "error": "Quelque chose s'est mal passé. Veuillez réessayer."
+    }
+  },
+  "scholarships": {
+    "title": "Bourses",
+    "subtitle": "Découvrez des opportunités de bourses vérifiées dans le monde entier",
+    "searchLabel": "Rechercher des bourses",
+    "resultsCount": "{count} bourse{plural} trouvée{plural}",
+    "noResults": "Aucune bourse trouvée",
+    "noResultsDesc": "Essayez de modifier vos termes de recherche ou de supprimer certains filtres.",
+    "clearFilters": "Effacer tous les filtres",
+    "filters": {
+      "title": "Filtres",
+      "type": "Type d'opportunité",
+      "degree": "Niveau d'études",
+      "funding": "Type de financement",
+      "country": "Pays",
+      "destination": "Destination d'études",
+      "field": "Domaine d'études",
+      "mode": "Mode d'études",
+      "nationality": "Pour les étudiants de",
+      "deadline": "Date limite",
+      "verification": "Statut de vérification",
+      "allNationalities": "Toutes nationalités",
+      "clearAll": "Tout effacer"
+    },
+    "sort": {
+      "label": "Trier par",
+      "newest": "Plus récent",
+      "deadline": "Date limite (la plus proche)",
+      "updated": "Récemment mis à jour",
+      "views": "Plus consultés",
+      "saves": "Plus sauvegardés",
+      "recommended": "Recommandés"
+    },
+    "card": {
+      "deadline": "Date limite",
+      "deadline_passed": "Date limite dépassée",
+      "fullyFunded": "Entièrement financé",
+      "verified": "Vérifié",
+      "demo": "DÉMO",
+      "viewDetails": "Voir les détails",
+      "save": "Sauvegarder",
+      "saved": "Sauvegardé",
+      "share": "Partager",
+      "daysLeft": "{days} jours restants",
+      "closingTomorrow": "Fermeture demain",
+      "closingToday": "Fermeture aujourd'hui !"
+    },
+    "detail": {
+      "overview": "Aperçu",
+      "funding": "Financement",
+      "eligibility": "Critères d'éligibilité",
+      "documents": "Documents requis",
+      "process": "Processus de candidature",
+      "verification": "Vérification",
+      "applyNow": "Postuler sur le site officiel",
+      "applyWarning": "Vous serez redirigé vers le site officiel du prestataire de bourses.",
+      "disclaimer": "EduBridge Agency fournit des informations et des conseils sur les bourses. Les critères d'éligibilité, les délais, les décisions de sélection et les procédures de candidature sont contrôlés par le prestataire officiel de bourses. Vérifiez toujours les dernières informations sur le site officiel du prestataire avant de postuler.",
+      "report": "Signaler cette opportunité",
+      "reportTitle": "Signaler un problème",
+      "reportDesc": "Aidez-nous à maintenir des informations précises en signalant tout problème avec cette annonce.",
+      "verifiedBy": "Vérifié par EduBridge Agency",
+      "lastVerified": "Dernière vérification",
+      "pendingVerification": "En attente de vérification par l'équipe EduBridge",
+      "demoNotice": "⚠️ DONNÉES DÉMO — Ce contenu est un exemple à des fins de développement uniquement. N'utilisez pas ces informations pour postuler à des bourses.",
+      "fundingCovered": "Ce qui est couvert",
+      "tuition": "Frais de scolarité",
+      "accommodation": "Logement",
+      "stipend": "Allocation mensuelle",
+      "travel": "Allocation de voyage",
+      "insurance": "Assurance maladie",
+      "visaSupport": "Aide au visa",
+      "researchAllowance": "Allocation de recherche"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenue, {name} !",
+    "overview": "Aperçu",
+    "profileCompletion": "Complétion du profil",
+    "profileCompleteDesc": "Complétez votre profil pour obtenir de meilleures recommandations de bourses.",
+    "completeProfile": "Compléter le profil",
+    "recommended": "Recommandé pour vous",
+    "upcomingDeadlines": "Prochaines échéances",
+    "recentNotifications": "Notifications récentes",
+    "tryAI": "Essayez EduBridge AI",
+    "tryAIDesc": "Obtenez des conseils personnalisés sur les bourses, de l'aide pour votre candidature et plus encore.",
+    "launchAI": "Lancer EduBridge AI",
+    "noDeadlines": "Aucune échéance à venir",
+    "noNotifications": "Aucune nouvelle notification",
+    "stats": {
+      "saved": "Sauvegardés",
+      "applications": "Candidatures",
+      "notifications": "Non lus"
+    }
+  },
+  "profile": {
+    "title": "Mon Profil",
+    "tabs": {
+      "basic": "Informations de base",
+      "academic": "Académique",
+      "preferences": "Préférences",
+      "languages": "Langues"
+    },
+    "fields": {
+      "name": "Nom complet",
+      "photo": "Photo de profil",
+      "country": "Pays de résidence",
+      "nationality": "Nationalité",
+      "educationLevel": "Niveau d'études",
+      "institution": "Institution actuelle",
+      "field": "Domaine d'études",
+      "gpa": "Moyenne (sur 4.0)",
+      "graduationYear": "Année de diplôme prévue",
+      "preferredCountries": "Pays d'études préférés",
+      "preferredFields": "Domaines d'études préférés",
+      "preferredDegree": "Niveau d'études souhaité",
+      "languages": "Langues parlées",
+      "englishLevel": "Niveau d'anglais",
+      "frenchLevel": "Niveau de français",
+      "workExperience": "Expérience professionnelle/de recherche",
+      "interests": "Intérêts de recherche"
+    },
+    "saveChanges": "Enregistrer les modifications",
+    "saved": "Profil enregistré avec succès !",
+    "uploadPhoto": "Télécharger une photo",
+    "changePhoto": "Changer la photo"
+  },
+  "applications": {
+    "title": "Suivi des candidatures",
+    "subtitle": "Suivez l'avancement de vos candidatures de bourses",
+    "addApplication": "Ajouter une candidature",
+    "noApplications": "Aucune candidature pour l'instant",
+    "noApplicationsDesc": "Commencez à suivre vos candidatures de bourses.",
+    "exploreScholarships": "Explorer les bourses",
+    "status": {
+      "interested": "Intéressé(e)",
+      "preparing": "En préparation",
+      "ready": "Prêt(e) à postuler",
+      "applied": "Postuléé)",
+      "interview": "Entretien",
+      "accepted": "Accepté(e)",
+      "rejected": "Refusé(e)",
+      "withdrawn": "Retiré(e)"
+    },
+    "updateStatus": "Mettre à jour le statut",
+    "notes": "Notes",
+    "addNotes": "Ajouter des notes...",
+    "deadline": "Date limite",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cet enregistrement de candidature ?"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Marquer tout comme lu",
+    "noNotifications": "Aucune notification",
+    "noNotificationsDesc": "Vous êtes à jour ! Nous vous notifierons des nouvelles correspondances et rappels d'échéances.",
+    "types": {
+      "matching_scholarship": "Nouvelle correspondance",
+      "deadline_approaching": "Rappel d'échéance",
+      "scholarship_updated": "Opportunité mise à jour",
+      "application_reminder": "Rappel de candidature",
+      "announcement": "Annonce"
+    }
+  },
+  "ai": {
+    "title": "EduBridge AI",
+    "subtitle": "Votre Assistant Bourses",
+    "disclaimer": "EduBridge AI fournit des conseils et des informations uniquement. Il ne fabrique jamais d'informations sur les bourses. Vérifiez toujours sur les sites officiels.",
+    "newChat": "Nouvelle conversation",
+    "inputPlaceholder": "Posez à EduBridge AI toute question sur les bourses...",
+    "suggestedPrompts": {
+      "find": "Trouvez des bourses pour moi",
+      "match": "Quelles opportunités correspondent à mon profil ?",
+      "motivation": "Comment rédiger une lettre de motivation ?",
+      "documents": "Quels documents me faut-il ?",
+      "interview": "Comment se préparer à un entretien de bourse ?"
+    },
+    "tools": {
+      "chat": "Chat",
+      "motivation": "Lettre de motivation",
+      "cv": "Assistant CV",
+      "statement": "Déclaration personnelle",
+      "interview": "Coach d'entretien"
+    },
+    "thinking": "EduBridge AI réfléchit...",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "notConfigured": "Les fonctionnalités IA ne sont pas encore configurées. Veuillez ajouter votre clé API pour commencer."
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenue",
+      "subtitle": "Connectez-vous à votre compte EduBridge Agency",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "orContinueWith": "Ou continuer avec",
+      "google": "Continuer avec Google",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "createAccount": "Créer un compte",
+      "errors": {
+        "invalid": "E-mail ou mot de passe invalide. Veuillez réessayer.",
+        "suspended": "Votre compte a été suspendu. Veuillez contacter le support.",
+        "generic": "Connexion échouée. Veuillez réessayer."
+      }
+    },
+    "register": {
+      "title": "Créez votre compte",
+      "subtitle": "Rejoignez des milliers d'étudiants qui découvrent des bourses",
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "terms": "J'accepte les Conditions d'utilisation et la Politique de confidentialité",
+      "submit": "Créer un compte",
+      "orContinueWith": "Ou continuer avec",
+      "google": "Continuer avec Google",
+      "hasAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter",
+      "passwordStrength": {
+        "weak": "Faible",
+        "fair": "Moyen",
+        "good": "Bon",
+        "strong": "Fort"
+      }
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "subtitle": "Entrez votre e-mail et nous vous enverrons un lien de réinitialisation",
+      "email": "Adresse e-mail",
+      "submit": "Envoyer le lien de réinitialisation",
+      "success": "Vérifiez votre e-mail pour un lien de réinitialisation du mot de passe.",
+      "backToLogin": "Retour à la connexion"
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Entrez votre nouveau mot de passe",
+      "password": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le nouveau mot de passe",
+      "submit": "Réinitialiser le mot de passe",
+      "success": "Mot de passe réinitialisé avec succès. Vous pouvez maintenant vous connecter.",
+      "invalidToken": "Ce lien de réinitialisation est invalide ou a expiré."
+    }
+  },
+  "resources": {
+    "title": "Centre de Ressources",
+    "subtitle": "Guides, conseils et tutoriels pour vous aider à réussir",
+    "allCategories": "Toutes les catégories",
+    "readMore": "Lire l'article",
+    "readingTime": "{time} min de lecture",
+    "relatedArticles": "Articles connexes",
+    "shareArticle": "Partager cet article",
+    "noResources": "Aucune ressource trouvée",
+    "noResourcesDesc": "Revenez bientôt pour des articles et guides utiles.",
+    "categories": {
+      "scholarships": "Bourses",
+      "studyAbroad": "Études à l'étranger",
+      "cv": "CV et curriculum vitae",
+      "motivation": "Lettres de motivation",
+      "statement": "Déclarations personnelles",
+      "ielts": "IELTS/TOEFL",
+      "visa": "Guide visa",
+      "university": "Candidatures universitaires",
+      "interviews": "Entretiens",
+      "finance": "Finances étudiantes",
+      "career": "Développement de carrière"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page introuvable",
+      "desc": "La page que vous recherchez n'existe pas ou a été déplacée.",
+      "home": "Aller à l'accueil",
+      "scholarships": "Parcourir les bourses"
+    },
+    "500": {
+      "title": "Quelque chose s'est mal passé",
+      "desc": "Nous avons rencontré une erreur inattendue. Veuillez réessayer.",
+      "tryAgain": "Réessayer"
+    },
+    "unauthorized": {
+      "title": "Non autorisé",
+      "desc": "Vous n'avez pas la permission d'accéder à cette page."
+    }
+  },
+  "empty": {
+    "savedScholarships": {
+      "title": "Aucune opportunité sauvegardée",
+      "desc": "Parcourez les bourses et sauvegardez celles qui vous intéressent.",
+      "cta": "Explorer les bourses"
+    },
+    "applications": {
+      "title": "Aucune candidature suivie",
+      "desc": "Commencez à suivre votre parcours de candidature de bourses.",
+      "cta": "Ajouter une candidature"
+    },
+    "notifications": {
+      "title": "Aucune notification",
+      "desc": "Vous êtes à jour ! Les notifications apparaîtront ici."
+    },
+    "search": {
+      "title": "Aucun résultat trouvé",
+      "desc": "Essayez d'ajuster vos termes de recherche ou de supprimer certains filtres.",
+      "cta": "Effacer les filtres"
+    }
+  },
+  "legal": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique de cookies",
+    "disclaimer": "Avertissement",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "degreeLabels": {
+    "undergraduate": "Licence",
+    "masters": "Master",
+    "phd": "Doctorat",
+    "diploma": "Diplôme",
+    "certificate": "Certificat",
+    "postdoctoral": "Post-doctorat",
+    "fellowship": "Fellowship"
+  },
+  "fundingLabels": {
+    "fully_funded": "Entièrement financé",
+    "partially_funded": "Partiellement financé",
+    "tuition_waiver": "Dispense de frais de scolarité",
+    "monthly_stipend": "Allocation mensuelle",
+    "travel_funding": "Financement de voyage",
+    "accommodation": "Logement",
+    "research_funding": "Financement de recherche"
+  },
+  "typeLabels": {
+    "scholarship": "Bourse",
+    "fellowship": "Fellowship",
+    "grant": "Subvention",
+    "internship": "Stage",
+    "exchange": "Programme d'échange",
+    "research": "Programme de recherche",
+    "competition": "Concours",
+    "conference": "Conférence",
+    "summer_program": "Programme d'été",
+    "volunteer": "Programme de bénévolat",
+    "online_course": "Cours en ligne",
+    "job_vacancy": "Offre d emploi"
+  }
+}

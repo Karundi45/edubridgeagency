@@ -1,0 +1,549 @@
+{
+  "common": {
+    "appName": "EduBridge Agency",
+    "tagline": "Discover Opportunities. Build Your Future.",
+    "search": "Search",
+    "searchPlaceholder": "Search scholarships, universities, countries, fields...",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Create Account",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "saved": "Saved",
+    "applications": "Applications",
+    "notifications": "Notifications",
+    "adminDashboard": "Admin Dashboard",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "share": "Share",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "required": "Required",
+    "optional": "Optional",
+    "learnMore": "Learn more",
+    "viewAll": "View All",
+    "seeAll": "See All",
+    "noResults": "No results found",
+    "tryAgain": "Try again",
+    "close": "Close",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "nav": {
+    "home": "Home",
+    "scholarships": "Scholarships",
+    "opportunities": "Opportunities",
+    "resources": "Resources",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "headline": "Find Scholarships. Change Your Future.",
+      "subheadline": "EduBridge Agency helps students discover scholarships, educational opportunities, and resources to build a better future.",
+      "searchPlaceholder": "Search scholarships, universities, countries, fields or opportunities...",
+      "cta1": "Find Opportunities",
+      "cta2": "Explore Scholarships",
+      "trust1": "15,000+ students helped",
+      "trust2": "Verified opportunities",
+      "trust3": "Free to use"
+    },
+    "stats": {
+      "title": "Trusted by Students Across Africa and Beyond",
+      "scholarships": "Scholarships Available",
+      "opportunities": "Total Opportunities",
+      "countries": "Countries",
+      "fields": "Study Fields",
+      "students": "Students Reached"
+    },
+    "featured": {
+      "title": "Featured Scholarships",
+      "subtitle": "Hand-picked opportunities verified by our team",
+      "viewAll": "View All Scholarships"
+    },
+    "latest": {
+      "title": "Latest Opportunities",
+      "subtitle": "Recently added scholarships, fellowships, and more"
+    },
+    "closingSoon": {
+      "title": "Closing Soon",
+      "subtitle": "Act fast — these opportunities are closing soon",
+      "daysLeft": "{days} days remaining",
+      "closingTomorrow": "Closing tomorrow",
+      "closingToday": "Closing today!",
+      "closed": "Closed"
+    },
+    "byDegree": {
+      "title": "Browse by Degree Level",
+      "subtitle": "Find opportunities matching your academic level"
+    },
+    "byFunding": {
+      "title": "Browse by Funding Type",
+      "subtitle": "Find the right financial support for your studies"
+    },
+    "byField": {
+      "title": "Browse by Field of Study",
+      "subtitle": "Explore opportunities in your area of expertise"
+    },
+    "byCountry": {
+      "title": "Browse by Country",
+      "subtitle": "Find opportunities in your preferred destination",
+      "allCountries": "All Countries"
+    },
+    "howItWorks": {
+      "title": "How EduBridge Agency Works",
+      "subtitle": "Your path to educational and career opportunities in 4 simple steps",
+      "step1Title": "Create Your Profile",
+      "step1Desc": "Tell EduBridge Agency about your education, interests, and goals to get personalized recommendations.",
+      "step2Title": "Discover Opportunities",
+      "step2Desc": "Browse thousands of international scholarships, fellowships, and local jobs in Rwanda.",
+      "step3Title": "Check Your Match",
+      "step3Desc": "See how well each opportunity aligns with your profile and what you need to prepare.",
+      "step4Title": "Apply & Track",
+      "step4Desc": "Follow the official application process on the provider or employer's website, and track your progress in your dashboard."
+    },
+    "testimonials": {
+      "title": "Student Success Stories",
+      "subtitle": "Real students. Real opportunities. Real impact.",
+      "disclaimer": "* Stories are representative examples. Results vary."
+    },
+    "newsletter": {
+      "title": "Get Scholarship Opportunities in Your Inbox",
+      "subtitle": "Join thousands of students who receive curated scholarship alerts every week.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "countryLabel": "Your country",
+      "degreeLabel": "Preferred degree level",
+      "fieldLabel": "Preferred field",
+      "cta": "Subscribe for Free",
+      "privacy": "No spam. Unsubscribe anytime.",
+      "success": "You're subscribed! Check your inbox for a confirmation.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "scholarships": {
+    "title": "Scholarships",
+    "subtitle": "Discover verified scholarship opportunities worldwide",
+    "searchLabel": "Search scholarships",
+    "resultsCount": "{count} scholarship{plural} found",
+    "noResults": "No scholarships found",
+    "noResultsDesc": "Try changing your search terms or clearing some filters.",
+    "clearFilters": "Clear All Filters",
+    "filters": {
+      "title": "Filters",
+      "type": "Opportunity Type",
+      "degree": "Degree Level",
+      "funding": "Funding Type",
+      "country": "Country",
+      "destination": "Study Destination",
+      "field": "Field of Study",
+      "mode": "Study Mode",
+      "nationality": "For Students From",
+      "deadline": "Deadline",
+      "verification": "Verification Status",
+      "allNationalities": "All Nationalities",
+      "clearAll": "Clear All"
+    },
+    "sort": {
+      "label": "Sort by",
+      "newest": "Newest First",
+      "deadline": "Deadline (Soonest)",
+      "updated": "Recently Updated",
+      "views": "Most Viewed",
+      "saves": "Most Saved",
+      "recommended": "Recommended"
+    },
+    "card": {
+      "deadline": "Deadline",
+      "deadline_passed": "Deadline passed",
+      "fullyFunded": "Fully Funded",
+      "verified": "Verified",
+      "demo": "DEMO",
+      "viewDetails": "View Details",
+      "save": "Save",
+      "saved": "Saved",
+      "share": "Share",
+      "daysLeft": "{days} days left",
+      "closingTomorrow": "Closing tomorrow",
+      "closingToday": "Closing today!"
+    },
+    "detail": {
+      "overview": "Overview",
+      "funding": "Funding",
+      "eligibility": "Eligibility",
+      "documents": "Required Documents",
+      "process": "Application Process",
+      "verification": "Verification",
+      "applyNow": "Apply on Official Website",
+      "applyWarning": "You will be redirected to the official scholarship provider website.",
+      "disclaimer": "EduBridge Agency provides scholarship information and guidance. Eligibility requirements, deadlines, selection decisions, and application procedures are controlled by the official scholarship provider. Always verify the latest information on the official provider website before applying.",
+      "report": "Report this opportunity",
+      "reportTitle": "Report an Issue",
+      "reportDesc": "Help us maintain accurate information by reporting any issues with this listing.",
+      "verifiedBy": "Verified by EduBridge Agency",
+      "lastVerified": "Last verified",
+      "pendingVerification": "Pending verification by EduBridge team",
+      "demoNotice": "⚠️ DEMO DATA — This is sample content for development purposes only. Do not use this information to apply for scholarships.",
+      "fundingCovered": "What's Covered",
+      "tuition": "Tuition",
+      "accommodation": "Accommodation",
+      "stipend": "Monthly Stipend",
+      "travel": "Travel Allowance",
+      "insurance": "Health Insurance",
+      "visaSupport": "Visa Support",
+      "researchAllowance": "Research Allowance"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {name}!",
+    "overview": "Overview",
+    "profileCompletion": "Profile Completion",
+    "profileCompleteDesc": "Complete your profile to get better scholarship recommendations.",
+    "completeProfile": "Complete Profile",
+    "recommended": "Recommended for You",
+    "upcomingDeadlines": "Upcoming Deadlines",
+    "recentNotifications": "Recent Notifications",
+    "tryAI": "Try EduBridge AI",
+    "tryAIDesc": "Get personalized scholarship guidance, help with your application, and more.",
+    "launchAI": "Launch EduBridge AI",
+    "noDeadlines": "No upcoming deadlines",
+    "noNotifications": "No new notifications",
+    "stats": {
+      "saved": "Saved",
+      "applications": "Applications",
+      "notifications": "Unread"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "tabs": {
+      "basic": "Basic Info",
+      "academic": "Academic",
+      "preferences": "Preferences",
+      "languages": "Languages"
+    },
+    "fields": {
+      "name": "Full Name",
+      "photo": "Profile Photo",
+      "country": "Country of Residence",
+      "nationality": "Nationality",
+      "educationLevel": "Education Level",
+      "institution": "Current Institution",
+      "field": "Field of Study",
+      "gpa": "GPA (out of 4.0)",
+      "graduationYear": "Expected Graduation Year",
+      "preferredCountries": "Preferred Study Countries",
+      "preferredFields": "Preferred Fields of Study",
+      "preferredDegree": "Preferred Degree Level",
+      "languages": "Languages Spoken",
+      "englishLevel": "English Proficiency",
+      "frenchLevel": "French Proficiency",
+      "workExperience": "Work/Research Experience",
+      "interests": "Research Interests"
+    },
+    "saveChanges": "Save Changes",
+    "saved": "Profile saved successfully!",
+    "uploadPhoto": "Upload Photo",
+    "changePhoto": "Change Photo"
+  },
+  "applications": {
+    "title": "Application Tracker",
+    "subtitle": "Track your scholarship application progress",
+    "addApplication": "Add Application",
+    "noApplications": "No applications yet",
+    "noApplicationsDesc": "Start tracking your scholarship applications.",
+    "exploreScholarships": "Explore Scholarships",
+    "status": {
+      "interested": "Interested",
+      "preparing": "Preparing",
+      "ready": "Ready to Apply",
+      "applied": "Applied",
+      "interview": "Interview",
+      "accepted": "Accepted",
+      "rejected": "Rejected",
+      "withdrawn": "Withdrawn"
+    },
+    "updateStatus": "Update Status",
+    "notes": "Notes",
+    "addNotes": "Add notes...",
+    "deadline": "Deadline",
+    "deleteConfirm": "Are you sure you want to delete this application record?"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark all as read",
+    "noNotifications": "No notifications",
+    "noNotificationsDesc": "You're all caught up! We'll notify you about new matches and deadline reminders.",
+    "types": {
+      "matching_scholarship": "New Match",
+      "deadline_approaching": "Deadline Reminder",
+      "scholarship_updated": "Opportunity Updated",
+      "application_reminder": "Application Reminder",
+      "announcement": "Announcement"
+    }
+  },
+  "ai": {
+    "title": "EduBridge AI",
+    "subtitle": "Your Scholarship Assistant",
+    "disclaimer": "EduBridge AI provides guidance and information only. It never fabricates scholarship information. Always verify on official websites.",
+    "newChat": "New Chat",
+    "inputPlaceholder": "Ask EduBridge AI anything about scholarships...",
+    "suggestedPrompts": {
+      "find": "Find scholarships for me",
+      "match": "Which opportunities match my profile?",
+      "motivation": "How do I write a motivation letter?",
+      "documents": "What documents do I need?",
+      "interview": "How to prepare for a scholarship interview?"
+    },
+    "tools": {
+      "chat": "Chat",
+      "motivation": "Motivation Letter",
+      "cv": "CV Assistant",
+      "statement": "Personal Statement",
+      "interview": "Interview Coach"
+    },
+    "thinking": "EduBridge AI is thinking...",
+    "error": "I encountered an error. Please try again.",
+    "notConfigured": "AI features are not configured yet. Please add your API key to get started."
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your EduBridge Agency account",
+      "email": "Email address",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign In",
+      "orContinueWith": "Or continue with",
+      "google": "Continue with Google",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create account",
+      "errors": {
+        "invalid": "Invalid email or password. Please try again.",
+        "suspended": "Your account has been suspended. Please contact support.",
+        "generic": "Sign in failed. Please try again."
+      }
+    },
+    "register": {
+      "title": "Create Your Account",
+      "subtitle": "Join thousands of students discovering scholarships",
+      "name": "Full name",
+      "email": "Email address",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "terms": "I agree to the Terms of Service and Privacy Policy",
+      "submit": "Create Account",
+      "orContinueWith": "Or continue with",
+      "google": "Continue with Google",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "passwordStrength": {
+        "weak": "Weak",
+        "fair": "Fair",
+        "good": "Good",
+        "strong": "Strong"
+      }
+    },
+    "forgotPassword": {
+      "title": "Forgot Password",
+      "subtitle": "Enter your email and we'll send you a reset link",
+      "email": "Email address",
+      "submit": "Send Reset Link",
+      "success": "Check your email for a password reset link.",
+      "backToLogin": "Back to login"
+    },
+    "resetPassword": {
+      "title": "Reset Password",
+      "subtitle": "Enter your new password",
+      "password": "New password",
+      "confirmPassword": "Confirm new password",
+      "submit": "Reset Password",
+      "success": "Password reset successfully. You can now log in.",
+      "invalidToken": "This reset link is invalid or has expired."
+    }
+  },
+  "resources": {
+    "title": "Resource Center",
+    "subtitle": "Guides, tips, and tutorials to help you succeed",
+    "allCategories": "All Categories",
+    "readMore": "Read Article",
+    "readingTime": "{time} min read",
+    "relatedArticles": "Related Articles",
+    "shareArticle": "Share this article",
+    "noResources": "No resources found",
+    "noResourcesDesc": "Check back soon for helpful articles and guides.",
+    "categories": {
+      "scholarships": "Scholarships",
+      "studyAbroad": "Study Abroad",
+      "cv": "CV & Resume",
+      "motivation": "Motivation Letters",
+      "statement": "Personal Statements",
+      "ielts": "IELTS/TOEFL",
+      "visa": "Visa Guidance",
+      "university": "University Applications",
+      "interviews": "Interviews",
+      "finance": "Student Finance",
+      "career": "Career Development"
+    }
+  },
+  "about": {
+    "title": "About EduBridge Agency",
+    "mission": "Our Mission",
+    "missionText": "EduBridge Agency exists to bridge the gap between students and life-changing educational opportunities. We believe that every student, regardless of their background or location, deserves access to information about scholarships and educational pathways that can transform their future.",
+    "vision": "Our Vision",
+    "visionText": "A world where no talented student misses an educational opportunity due to lack of information or guidance.",
+    "verification": "Our Commitment to Accuracy",
+    "verificationText": "Every opportunity on EduBridge Agency is reviewed and verified by our team. We require official source documentation for verification. We never fabricate or exaggerate scholarship information.",
+    "stats": {
+      "opportunities": "Opportunities Listed",
+      "students": "Students Helped",
+      "countries": "Countries Covered",
+      "verified": "Verified Opportunities"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you! We'll get back to you within 1-2 business days.",
+      "error": "Something went wrong. Please try again."
+    },
+    "email": "Email",
+    "faqLink": "Check our FAQ first — your question might already be answered!",
+    "social": "Follow Us"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about EduBridge Agency",
+    "categories": {
+      "scholarships": "Scholarships",
+      "applications": "Applications",
+      "accounts": "Accounts",
+      "verification": "Verification",
+      "ai": "AI Features",
+      "international": "International Students",
+      "rwanda": "Rwandan Students"
+    }
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "scholarships": "Scholarships",
+    "users": "Users",
+    "resources": "Resources",
+    "reports": "Reports",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "activity": "Activity Log",
+    "addScholarship": "Add Scholarship",
+    "addResource": "Add Resource",
+    "stats": {
+      "students": "Total Students",
+      "active": "Active Users",
+      "scholarships": "Total Scholarships",
+      "published": "Published",
+      "pending": "Pending Verification",
+      "expired": "Expired",
+      "saves": "Total Saves",
+      "apps": "Applications",
+      "reports": "New Reports",
+      "subscribers": "Newsletter Subscribers"
+    },
+    "verification": {
+      "verify": "Verify",
+      "sourceUrl": "Official Source URL",
+      "sourceUrlRequired": "Source URL is required to verify an opportunity",
+      "notes": "Verification Notes",
+      "confirmed": "Opportunity verified successfully"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "desc": "The page you're looking for doesn't exist or has been moved.",
+      "home": "Go to Homepage",
+      "scholarships": "Browse Scholarships"
+    },
+    "500": {
+      "title": "Something Went Wrong",
+      "desc": "We encountered an unexpected error. Please try again.",
+      "tryAgain": "Try Again"
+    },
+    "unauthorized": {
+      "title": "Unauthorized",
+      "desc": "You don't have permission to access this page."
+    }
+  },
+  "empty": {
+    "savedScholarships": {
+      "title": "No saved opportunities yet",
+      "desc": "Browse scholarships and save the ones you're interested in.",
+      "cta": "Explore Scholarships"
+    },
+    "applications": {
+      "title": "No applications tracked",
+      "desc": "Start tracking your scholarship application journey.",
+      "cta": "Add Application"
+    },
+    "notifications": {
+      "title": "No notifications",
+      "desc": "You're all caught up! Notifications will appear here."
+    },
+    "search": {
+      "title": "No results found",
+      "desc": "Try adjusting your search terms or clearing some filters.",
+      "cta": "Clear Filters"
+    }
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "disclaimer": "Disclaimer",
+    "lastUpdated": "Last updated"
+  },
+  "degreeLabels": {
+    "undergraduate": "Undergraduate",
+    "masters": "Master's",
+    "phd": "PhD",
+    "diploma": "Diploma",
+    "certificate": "Certificate",
+    "postdoctoral": "Postdoctoral",
+    "fellowship": "Fellowship"
+  },
+  "fundingLabels": {
+    "fully_funded": "Fully Funded",
+    "partially_funded": "Partially Funded",
+    "tuition_waiver": "Tuition Waiver",
+    "monthly_stipend": "Monthly Stipend",
+    "travel_funding": "Travel Funding",
+    "accommodation": "Accommodation",
+    "research_funding": "Research Funding"
+  },
+  "typeLabels": {
+    "scholarship": "Scholarship",
+    "fellowship": "Fellowship",
+    "grant": "Grant",
+    "internship": "Internship",
+    "exchange": "Exchange Program",
+    "research": "Research Program",
+    "competition": "Competition",
+    "conference": "Conference",
+    "summer_program": "Summer Program",
+    "volunteer": "Volunteer Program",
+    "online_course": "Online Course",
+    "job_vacancy": "Job Vacancy"
+  }
+}
