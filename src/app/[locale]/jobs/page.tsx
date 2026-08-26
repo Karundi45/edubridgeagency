@@ -20,7 +20,8 @@ export default async function JobsPage({ params: { locale } }: { params: { local
     ]
   };
   
-  const jobs = await Job.find(matchQuery).sort({ isFeatured: -1, createdAt: -1 }).lean();
+  const jobsDocs = await Job.find(matchQuery).sort({ isFeatured: -1, createdAt: -1 }).lean();
+  const jobs = JSON.parse(JSON.stringify(jobsDocs));
 
   return (
     <div className="min-h-screen bg-surface-alt">
