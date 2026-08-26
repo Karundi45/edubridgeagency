@@ -67,8 +67,11 @@ export function ScholarshipCard({ opportunity, locale = 'en', featured = false }
         <div className="p-5 flex-1 flex flex-col">
           {/* Header Badges */}
           <div className="flex flex-wrap gap-2 mb-3">
-            {opportunity.funding?.tuition && opportunity.funding?.stipend && (
-              <Badge variant="success" size="sm">{t('fullyFunded')}</Badge>
+            {opportunity.fundingType?.includes('fully_funded') && (
+              <Badge variant="success" size="sm">Fully Funded</Badge>
+            )}
+            {opportunity.fundingType?.includes('partially_funded') && (
+              <Badge variant="warning" size="sm">Partially Funded</Badge>
             )}
             {opportunity.verification?.status === 'verified' && (
               <Badge variant="primary" size="sm" className="bg-blue-50 text-primary border border-blue-100">

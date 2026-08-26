@@ -30,8 +30,10 @@ export async function POST(req: NextRequest) {
       .update(`folder=edubridge&timestamp=${timestamp}${apiSecret}`)
       .digest('hex');
 
+    const base64File = `data:${file.type};base64,${buffer.toString('base64')}`;
+
     const cloudinaryFormData = new FormData();
-    cloudinaryFormData.append('file', file);
+    cloudinaryFormData.append('file', base64File);
     cloudinaryFormData.append('api_key', apiKey);
     cloudinaryFormData.append('timestamp', timestamp.toString());
     cloudinaryFormData.append('signature', signature);
