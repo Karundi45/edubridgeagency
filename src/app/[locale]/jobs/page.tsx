@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { MapPin, Briefcase, Calendar, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
-export default async function JobsPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function JobsPage(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params;
   const t = await getTranslations('common');
   
   await connectToDatabase();
@@ -20,11 +21,18 @@ export default async function JobsPage({ params: { locale } }: { params: { local
     ]
   };
   
-  const jobsDocs = await Job.find(matchQuery).sort({ isFeatured: -1, createdAt: -1 }).lean();
-  const jobs = JSON.parse(JSON.stringify(jobsDocs));
+  try {
+    const jobsDocs = await Job.find(matchQuery).sort({ isFeatured: -1, createdAt: -1 }).lean();
+    const jobs = JSON.parse(JSON.stringify(jobsDocs));
+    
+    // Test if jobs mapping throws
+    jobs.map((job: any) => {
+      const type = job.employmentType?.join(', ') || 'Full-time';
+      const title = job.title?.[locale as 'en' | 'fr'] || job.title?.en;
+    });
 
-  return (
-    <div className="min-h-screen bg-surface-alt">
+    return (
+      <div className="min-h-screen bg-surface-alt">
       {/* Hero Section */}
       <div className="bg-primary text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center space-y-4">
@@ -158,4 +166,8 @@ export default async function JobsPage({ params: { locale } }: { params: { local
       </div>
     </div>
   );
+  } catch (error) { 
+    console.error("REAL ERROR:", error); 
+    return <div className="p-20 text-center text-red-500">Error loading jobs. Check server console for the real error!</div>; 
+  }
 }
