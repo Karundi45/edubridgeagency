@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
-import { Search, GraduationCap, Globe, BookOpen, ChevronRight, ShieldCheck, Zap, Briefcase } from 'lucide-react';
+import { Search, GraduationCap, Globe, ChevronRight, ShieldCheck, Zap, Briefcase } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { TrendingMarquee } from '@/components/home/TrendingMarquee';
@@ -56,14 +57,16 @@ export default async function Home() {
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden relative">
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
-            <img 
-              src="/hero-bg.png"
-              alt="Background"
-              className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+            <Image 
+              src="/hero-bg.png?v=4"
+              alt="Hero Background"
+              fill
+              priority
+              className="object-cover object-center animate-slow-zoom"
             />
           </div>
           {/* Blue Overlay (Gradient for visibility) */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-950/95 via-blue-900/80 to-blue-800/40"></div>
+          <div className="absolute inset-0 z-10 bg-linear-to-r from-blue-900/80 via-blue-900/40 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto relative z-20 text-center">
             <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
@@ -119,7 +122,7 @@ export default async function Home() {
 
             {featuredOpportunities.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {featuredOpportunities.map((opp) => (
+                {featuredOpportunities.map((opp: any) => (
                   <ScholarshipCard key={opp._id.toString()} opportunity={opp} featured={true} />
                 ))}
               </div>
