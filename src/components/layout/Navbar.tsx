@@ -19,6 +19,7 @@ import {
   Shield,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { LanguageSwitcher } from '@/components/common/LanguageSwitcher';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -88,10 +89,9 @@ export default function Navbar() {
             </Link>
 
             {/* Language Switcher */}
-            <button className="hidden sm:flex items-center gap-1 px-2 py-1.5 text-xs font-medium text-text-muted hover:text-primary hover:bg-surface-alt rounded-md transition-colors">
-              <Globe className="w-4 h-4" />
-              <span>EN</span>
-            </button>
+            <div className="hidden sm:flex">
+              <LanguageSwitcher />
+            </div>
 
             {session?.user ? (
               <>
@@ -204,6 +204,9 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="px-3 py-2 border-t border-border mt-2 pt-3">
+              <LanguageSwitcher />
+            </div>
             {session?.user ? (
               <div className="border-t border-border pt-3 mt-3 space-y-1">
                 <Link href="/dashboard" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-text-secondary hover:bg-surface-alt rounded-lg">

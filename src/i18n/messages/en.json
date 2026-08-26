@@ -99,16 +99,12 @@
       "allCountries": "All Countries"
     },
     "howItWorks": {
-      "title": "How EduBridge Agency Works",
-      "subtitle": "Your path to educational and career opportunities in 4 simple steps",
-      "step1Title": "Create Your Profile",
-      "step1Desc": "Tell EduBridge Agency about your education, interests, and goals to get personalized recommendations.",
-      "step2Title": "Discover Opportunities",
-      "step2Desc": "Browse thousands of international scholarships, fellowships, and local jobs in Rwanda.",
-      "step3Title": "Check Your Match",
-      "step3Desc": "See how well each opportunity aligns with your profile and what you need to prepare.",
-      "step4Title": "Apply & Track",
-      "step4Desc": "Follow the official application process on the provider or employer's website, and track your progress in your dashboard."
+      "title": "How Does EduBridge Agency Work?",
+      "subtitle": "Your path to educational and career opportunities",
+      "step1Title": "Browse the Opportunity",
+      "step1Desc": "Explore thousands of international scholarships, fellowships, and local jobs in Rwanda.",
+      "step2Title": "Reach on us for help and assistance",
+      "step2Desc": "Contact EduBridge Agency for personalized help, guidance, and application assistance."
     },
     "testimonials": {
       "title": "Student Success Stories",

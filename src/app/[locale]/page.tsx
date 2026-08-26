@@ -60,7 +60,7 @@ export default async function Home() {
             style={{ backgroundImage: "url('/hero-bg.png')" }}
           ></div>
           {/* Blue Overlay */}
-          <div className="absolute inset-0 bg-primary/80"></div>
+          <div className="absolute inset-0 bg-primary/50"></div>
           
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
@@ -212,8 +212,8 @@ export default async function Home() {
             <h2 className="heading-2 text-text mb-2">{t('howItWorks.title')}</h2>
             <p className="text-text-muted mb-16">{t('howItWorks.subtitle')}</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-              <div className="hidden md:block absolute top-12 left-[12%] right-[12%] h-0.5 bg-border-strong border-dashed border-t-2 z-0"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative max-w-4xl mx-auto">
+              <div className="hidden md:block absolute top-12 left-[25%] right-[25%] h-0.5 bg-border-strong border-dashed border-t-2 z-0"></div>
               
               <div className="relative z-10 flex flex-col items-center">
                 <div className="w-24 h-24 bg-white rounded-2xl shadow-sm border border-border flex items-center justify-center mb-6 text-primary">
@@ -229,22 +229,6 @@ export default async function Home() {
                 </div>
                 <h3 className="text-lg font-bold text-text mb-2">{t('howItWorks.step2Title')}</h3>
                 <p className="text-sm text-text-muted">{t('howItWorks.step2Desc')}</p>
-              </div>
-              
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-24 h-24 bg-white rounded-2xl shadow-sm border border-border flex items-center justify-center mb-6 text-gold">
-                  <span className="text-3xl font-bold">3</span>
-                </div>
-                <h3 className="text-lg font-bold text-text mb-2">{t('howItWorks.step3Title')}</h3>
-                <p className="text-sm text-text-muted">{t('howItWorks.step3Desc')}</p>
-              </div>
-              
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-24 h-24 bg-white rounded-2xl shadow-sm border border-border flex items-center justify-center mb-6 text-primary">
-                  <span className="text-3xl font-bold">4</span>
-                </div>
-                <h3 className="text-lg font-bold text-text mb-2">{t('howItWorks.step4Title')}</h3>
-                <p className="text-sm text-text-muted">{t('howItWorks.step4Desc')}</p>
               </div>
             </div>
           </div>
