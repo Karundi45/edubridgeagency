@@ -60,7 +60,7 @@ export default async function Home() {
             style={{ backgroundImage: "url('/hero-bg.png')" }}
           ></div>
           {/* Blue Overlay (Gradient for visibility) */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-primary/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/60 to-blue-900/20"></div>
           
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
