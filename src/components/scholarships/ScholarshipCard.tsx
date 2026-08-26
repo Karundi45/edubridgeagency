@@ -54,15 +54,15 @@ export function ScholarshipCard({ opportunity, locale = 'en', featured = false }
       <Card className={`h-full flex flex-col transition-all duration-300 overflow-hidden ${featured ? 'border-primary shadow-md hover:shadow-xl hover:-translate-y-1' : 'hover:border-border-strong hover:shadow-md'}`}>
         
         {/* Poster Image */}
-        {opportunity.logo && (
-          <div className="w-full h-40 bg-surface-alt relative overflow-hidden border-b border-border">
-            <img 
-              src={opportunity.logo} 
-              alt={title} 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-        )}
+        <div className="w-full h-40 bg-surface-alt relative overflow-hidden border-b border-border">
+          <img 
+            src={opportunity.logo || (opportunity.type === 'job' 
+              ? 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop' 
+              : 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop')}
+            alt={title} 
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
 
         <div className="p-5 flex-1 flex flex-col">
           {/* Header Badges */}

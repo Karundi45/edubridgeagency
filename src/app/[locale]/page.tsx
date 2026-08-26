@@ -60,7 +60,7 @@ export default async function Home() {
             style={{ backgroundImage: "url('/hero-bg.png')" }}
           ></div>
           {/* Blue Overlay */}
-          <div className="absolute inset-0 bg-primary/50"></div>
+          <div className="absolute inset-0 bg-primary/80"></div>
           
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
