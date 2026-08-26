@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     
     // Send email notification to admin
     await sendEmail({
-      to: process.env.EMAIL_FROM || 'admin@edubridge-agency.com',
+      to: process.env.CONTACT_EMAIL || 'karundi2004@gmail.com',
       subject: `New Contact Form Submission: ${data.subject}`,
       html: `
         <h2>New Message from EduBridge Agency Contact Form</h2>

@@ -91,7 +91,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   
   await connectToDatabase();
-  const whatsappNumber = await SystemSettings.get('whatsapp_number') as string || '+250788000000';
+  const whatsappNumber = await SystemSettings.get('whatsapp_number') as string || '+250791367715';
   const defaultMessage = await SystemSettings.get('whatsapp_default_message') as string || 'Hello EduBridge Agency, I would like more information about an opportunity I found on your website.';
 
   return (

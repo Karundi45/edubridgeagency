@@ -105,7 +105,7 @@ export default function Footer() {
               <a href="https://twitter.com" className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="X / Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="mailto:info@edubridge-agency.com" className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="Email">
+              <a href="mailto:karundi2004@gmail.com" className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="Email">
                 <Mail className="w-5 h-5" />
               </a>
             </div>

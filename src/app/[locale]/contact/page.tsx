@@ -59,7 +59,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-text">Email</h3>
-                <p className="text-sm text-text-muted">info@edubridge-agency.com</p>
+                <p className="text-sm text-text-muted">karundi2004@gmail.com</p>
               </Card>
 
               <Card className="p-6 flex flex-col items-center text-center space-y-3">
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-text">WhatsApp</h3>
-                <p className="text-sm text-text-muted">+250 788 000 000</p>
+                <p className="text-sm text-text-muted">+250791367715</p>
               </Card>
 
               <Card className="p-6 flex flex-col items-center text-center space-y-3">
