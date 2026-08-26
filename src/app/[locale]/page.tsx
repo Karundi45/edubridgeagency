@@ -65,14 +65,13 @@ export default async function Home() {
               className="object-cover object-center animate-slow-zoom"
             />
           </div>
-          {/* Blue Overlay (Gradient for visibility) */}
-          <div className="absolute inset-0 z-10 bg-linear-to-r from-blue-900/80 via-blue-900/40 to-transparent"></div>
+          {/* Removed Overlay as per user request */}
           
-          <div className="max-w-7xl mx-auto relative z-20 text-center">
+          <div className="max-w-7xl mx-auto relative z-20 text-center drop-shadow-md">
             <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
               {t('hero.headline')}
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               {t('hero.subheadline')}
             </p>
             
