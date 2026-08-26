@@ -55,14 +55,17 @@ export default async function Home() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden relative">
           {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slow-zoom" 
-            style={{ backgroundImage: "url('/hero-bg.png')" }}
-          ></div>
+          <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
+            <img 
+              src="/hero-bg.png"
+              alt="Background"
+              className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+            />
+          </div>
           {/* Blue Overlay (Gradient for visibility) */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/60 to-blue-900/20"></div>
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-blue-950/95 via-blue-900/80 to-blue-800/40"></div>
           
-          <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <div className="max-w-7xl mx-auto relative z-20 text-center">
             <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
               {t('hero.headline')}
             </h1>
