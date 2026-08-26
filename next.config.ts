@@ -25,10 +25,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  optimizeFonts: false,
   outputFileTracingRoot: process.cwd(),
   allowedDevOrigins: ['192.168.204.229'],
 };

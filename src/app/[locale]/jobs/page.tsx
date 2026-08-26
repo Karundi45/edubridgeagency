@@ -128,7 +128,7 @@ export default async function JobsPage({ params: { locale } }: { params: { local
                         </div>
                         <div className="flex items-center gap-1.5">
                           <Briefcase className="w-4 h-4" />
-                          <span>{job.employmentType.join(', ')}</span>
+                          <span>{job.employmentType?.join(', ') || 'Full-time'}</span>
                         </div>
                         {job.deadline && (
                           <div className="flex items-center gap-1.5">
