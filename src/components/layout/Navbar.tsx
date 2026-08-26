@@ -24,7 +24,7 @@ import { LanguageSwitcher } from '@/components/common/LanguageSwitcher';
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/scholarships', label: 'Scholarships' },
-  { href: '/opportunities', label: 'Opportunities' },
+  { href: '/jobs', label: 'Opportunities' },
   { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
