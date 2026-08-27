@@ -12,7 +12,35 @@ import Link from 'next/link';
 export default function NewJobPage() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [fileUrls, setFileUrls] = useState({
+    companyLogo: '',
+    requirementDocumentUrl: '',
+    officialAnnouncementUrl: ''
+  });
+  
   const { register, handleSubmit } = useForm();
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, fieldName: 'companyLogo' | 'requirementDocumentUrl' | 'officialAnnouncementUrl') => {
+    if (!e.target.files || e.target.files.length === 0) return;
+    const file = e.target.files[0];
+    
+    setUploading(true);
+    const data = new FormData();
+    data.append('file', file);
+    
+    try {
+      const res = await fetch('/api/upload', { method: 'POST', body: data });
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error);
+      setFileUrls(prev => ({ ...prev, [fieldName]: result.url }));
+      toast.success('File uploaded successfully');
+    } catch (err: any) {
+      toast.error('Failed to upload file: ' + err.message);
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const onSubmit = async (data: any) => {
     setIsLoading(true);
@@ -34,6 +62,10 @@ export default function NewJobPage() {
       applicationEmail: data.applicationEmail,
       status: data.status,
       isFeatured: data.isFeatured === 'true',
+      
+      companyLogo: fileUrls.companyLogo,
+      requirementDocumentUrl: fileUrls.requirementDocumentUrl,
+      officialAnnouncementUrl: fileUrls.officialAnnouncementUrl,
       
       // Split newline-separated text areas into arrays
       responsibilities: data.responsibilities ? data.responsibilities.split('\n').filter(Boolean) : [],
@@ -156,6 +188,51 @@ export default function NewJobPage() {
               <div>
                 <label className="block text-sm font-medium text-text mb-1.5">Requirements (One per line)</label>
                 <textarea className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-primary outline-none min-h-[100px]" {...register('requirements')}></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold border-b border-border pb-2">Media & Documents</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-1">
+                <label className="block text-sm font-medium text-text-secondary">Company Logo (Image)</label>
+                <input 
+                  type="file" 
+                  accept="image/*"
+                  onChange={(e) => handleFileUpload(e, 'companyLogo')} 
+                  disabled={uploading}
+                  className="w-full text-sm text-text-muted file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-dark"
+                />
+                {fileUrls.companyLogo && (
+                  <div className="mt-2 relative w-16 h-16 rounded overflow-hidden border border-border">
+                    <img src={fileUrls.companyLogo} alt="Logo preview" className="object-cover w-full h-full" />
+                  </div>
+                )}
+              </div>
+
+              <div className="space-y-1">
+                <label className="block text-sm font-medium text-text-secondary">Requirement Document (PDF/Doc)</label>
+                <input 
+                  type="file" 
+                  accept=".pdf,.doc,.docx"
+                  onChange={(e) => handleFileUpload(e, 'requirementDocumentUrl')} 
+                  disabled={uploading}
+                  className="w-full text-sm text-text-muted file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-dark"
+                />
+                {fileUrls.requirementDocumentUrl && <p className="text-sm text-success mt-1">✓ Document uploaded</p>}
+              </div>
+
+              <div className="space-y-1">
+                <label className="block text-sm font-medium text-text-secondary">Official Announcement (PDF/Doc)</label>
+                <input 
+                  type="file" 
+                  accept=".pdf,.doc,.docx"
+                  onChange={(e) => handleFileUpload(e, 'officialAnnouncementUrl')} 
+                  disabled={uploading}
+                  className="w-full text-sm text-text-muted file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-dark"
+                />
+                {fileUrls.officialAnnouncementUrl && <p className="text-sm text-success mt-1">✓ Document uploaded</p>}
               </div>
             </div>
           </div>
