@@ -16,7 +16,7 @@ const systemSettingsSchema = new Schema<ISystemSettingsDocument>(
   { timestamps: { createdAt: false, updatedAt: true } }
 );
 
-systemSettingsSchema.index({ key: 1 }, { unique: true });
+
 
 // Static methods
 systemSettingsSchema.statics.get = async function (key: string) {

@@ -29,7 +29,7 @@ const newsletterSubscriberSchema = new Schema<INewsletterSubscriberDocument>({
   active: { type: Boolean, default: true },
 });
 
-newsletterSubscriberSchema.index({ email: 1 }, { unique: true });
+
 newsletterSubscriberSchema.index({ active: 1 });
 
 const NewsletterSubscriber: Model<INewsletterSubscriberDocument> =

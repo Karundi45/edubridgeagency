@@ -13,7 +13,7 @@ const LocalizedStringSchema = new Schema({
 
 const jobSchema = new Schema<IJobDocument>({
   title: { type: LocalizedStringSchema, required: true },
-  slug: { type: String, required: true, unique: true, index: true },
+  slug: { type: String, required: true, unique: true },
   company: { type: String, required: true },
   companyLogo: { type: String },
   location: { type: String, required: true },
