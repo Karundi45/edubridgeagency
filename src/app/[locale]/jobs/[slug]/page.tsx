@@ -6,18 +6,20 @@ import { MapPin, Briefcase, Calendar, ChevronLeft, Building2, ExternalLink } fro
 import { Button } from '@/components/ui/Button';
 import { ReportButton } from '@/components/common/ReportButton';
 
-export default async function JobDetailPage({ params }: { params: { slug: string; locale: string } }) {
+export default async function JobDetailPage(props: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await props.params;
   await connectToDatabase();
   
-  const job = await Job.findOne({ slug: params.slug }).lean();
-  
-  if (!job) {
+  const jobDoc = await Job.findOne({ slug }).lean();
+  if (!jobDoc) {
     return notFound();
   }
+  
+  const job = JSON.parse(JSON.stringify(jobDoc));
 
-  const title = job.title?.[params.locale as 'en' | 'fr'] || job.title?.en;
-  const description = job.description?.[params.locale as 'en' | 'fr'] || job.description?.en;
-  const instructions = job.applicationInstructions?.[params.locale as 'en' | 'fr'] || job.applicationInstructions?.en;
+  const title = job.title?.[locale as 'en' | 'fr'] || job.title?.en;
+  const description = job.description?.[locale as 'en' | 'fr'] || job.description?.en;
+  const instructions = job.applicationInstructions?.[locale as 'en' | 'fr'] || job.applicationInstructions?.en;
   const isExpired = job.deadline && new Date(job.deadline) < new Date();
 
   return (
