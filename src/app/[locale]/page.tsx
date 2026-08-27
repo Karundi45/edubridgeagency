@@ -77,15 +77,16 @@ export default async function Home() {
             
             <div className="max-w-3xl mx-auto bg-white rounded-2xl p-2 flex items-center shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="flex-1 flex items-center pl-4">
-                <Search className="w-5 h-5 text-slate-400" />
+                <Search className="w-5 h-5 text-slate-400 shrink-0" />
                 <input 
                   type="text" 
                   placeholder={t('hero.searchPlaceholder')}
-                  className="w-full px-4 py-3 bg-transparent border-none focus:outline-none text-slate-900 placeholder:text-slate-400"
+                  className="w-full px-4 py-3 bg-transparent border-none focus:outline-none text-slate-900 placeholder:text-slate-400 text-sm sm:text-base"
                 />
               </div>
-              <Button size="lg" className="rounded-xl px-8 hidden sm:flex">
-                {tCommon('search')}
+              <Button size="lg" className="rounded-xl px-4 sm:px-8 shrink-0">
+                <span className="hidden sm:inline">{tCommon('search')}</span>
+                <Search className="w-5 h-5 sm:hidden" />
               </Button>
             </div>
             
