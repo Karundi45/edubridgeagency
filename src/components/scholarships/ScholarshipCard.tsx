@@ -57,8 +57,8 @@ export function ScholarshipCard({ opportunity, locale = 'en', featured = false }
         <div className="w-full h-40 bg-surface-alt relative overflow-hidden border-b border-border">
           <img 
             src={opportunity.logo || (opportunity.type === 'job' 
-              ? 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop' 
-              : 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop')}
+              ? 'https://placehold.co/800x400/10B981/FFFFFF?text=Job+Opportunity' 
+              : 'https://placehold.co/800x400/1E40AF/FFFFFF?text=Scholarship')}
             alt={title} 
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
