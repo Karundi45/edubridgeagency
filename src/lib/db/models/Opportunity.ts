@@ -98,6 +98,8 @@ export interface IOpportunityDocument extends Document {
   isFeatured: boolean;
   tags: string[];
   logo?: string;
+  requirementDocumentUrl?: string;
+  officialAnnouncementUrl?: string;
   createdBy?: mongoose.Types.ObjectId;
   isDemo?: boolean;
   daysUntilDeadline?: number;
@@ -142,6 +144,8 @@ const opportunitySchema = new Schema<IOpportunityDocument>(
     isFeatured: { type: Boolean, default: false },
     tags: [{ type: String }],
     logo: { type: String },
+    requirementDocumentUrl: { type: String },
+    officialAnnouncementUrl: { type: String },
     createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
     isDemo: { type: Boolean, default: false },
   },

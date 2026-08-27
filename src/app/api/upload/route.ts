@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     cloudinaryFormData.append('signature', signature);
     cloudinaryFormData.append('folder', 'edubridge');
 
-    const uploadRes = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+    const uploadRes = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`, {
       method: 'POST',
       body: cloudinaryFormData
     });

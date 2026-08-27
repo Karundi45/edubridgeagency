@@ -122,6 +122,35 @@ export default async function JobDetailPage(props: { params: Promise<{ slug: str
                   </Button>
                 )}
               </div>
+              
+              {/* Document Downloads */}
+              {(job.requirementDocumentUrl || job.officialAnnouncementUrl) && (
+                <div className="space-y-3 mt-8 pt-6 border-t border-slate-100">
+                  <h3 className="font-bold text-text-secondary text-sm uppercase tracking-wider mb-3">Official Documents</h3>
+                  {job.officialAnnouncementUrl && (
+                    <a href={job.officialAnnouncementUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary hover:bg-blue-50 transition-colors group">
+                      <div className="w-10 h-10 rounded-lg bg-blue-100 text-primary flex items-center justify-center shrink-0">
+                        <ExternalLink className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-text group-hover:text-primary transition-colors">Official Announcement</p>
+                        <p className="text-xs text-text-muted">Download or view the official announcement document</p>
+                      </div>
+                    </a>
+                  )}
+                  {job.requirementDocumentUrl && (
+                    <a href={job.requirementDocumentUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary hover:bg-blue-50 transition-colors group">
+                      <div className="w-10 h-10 rounded-lg bg-blue-100 text-primary flex items-center justify-center shrink-0">
+                        <ExternalLink className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-text group-hover:text-primary transition-colors">Entry Requirements</p>
+                        <p className="text-xs text-text-muted">Download or view the detailed requirements document</p>
+                      </div>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 

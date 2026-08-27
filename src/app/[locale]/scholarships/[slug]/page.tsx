@@ -160,14 +160,43 @@ export default async function ScholarshipDetailPage({ params }: { params: Promis
               )}
 
               {/* Application Process */}
-              {(applicationInstructions || opportunity.documents) && (
+              {(applicationInstructions || opportunity.requirementDocumentUrl || opportunity.officialAnnouncementUrl) && (
                 <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-border">
                   <h2 className="text-xl font-bold text-text mb-4 border-b border-border pb-4">{t('process')}</h2>
                   {applicationInstructions && (
                     <div 
-                      className="prose-content" 
+                      className="prose-content mb-6" 
                       dangerouslySetInnerHTML={{ __html: applicationInstructions }} 
                     />
+                  )}
+                  
+                  {/* Document Downloads */}
+                  {(opportunity.requirementDocumentUrl || opportunity.officialAnnouncementUrl) && (
+                    <div className="space-y-3 mt-6 pt-6 border-t border-slate-100">
+                      <h3 className="font-bold text-text-secondary text-sm uppercase tracking-wider mb-3">Official Documents</h3>
+                      {opportunity.officialAnnouncementUrl && (
+                        <a href={opportunity.officialAnnouncementUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary hover:bg-blue-50 transition-colors group">
+                          <div className="w-10 h-10 rounded-lg bg-blue-100 text-primary flex items-center justify-center shrink-0">
+                            <ExternalLink className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <p className="font-bold text-text group-hover:text-primary transition-colors">Official Announcement</p>
+                            <p className="text-xs text-text-muted">Download or view the official announcement document</p>
+                          </div>
+                        </a>
+                      )}
+                      {opportunity.requirementDocumentUrl && (
+                        <a href={opportunity.requirementDocumentUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-primary hover:bg-blue-50 transition-colors group">
+                          <div className="w-10 h-10 rounded-lg bg-blue-100 text-primary flex items-center justify-center shrink-0">
+                            <ExternalLink className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <p className="font-bold text-text group-hover:text-primary transition-colors">Entry Requirements</p>
+                            <p className="text-xs text-text-muted">Download or view the detailed requirements document</p>
+                          </div>
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               )}

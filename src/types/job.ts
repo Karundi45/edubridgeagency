@@ -34,6 +34,9 @@ export interface IJob {
   applicationUrl?: string;
   deadline?: string;
   
+  requirementDocumentUrl?: string;
+  officialAnnouncementUrl?: string;
+  
   featuredImage?: string;
   tags: string[];
   isFeatured: boolean;

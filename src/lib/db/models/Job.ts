@@ -35,6 +35,9 @@ const jobSchema = new Schema<IJobDocument>({
   applicationUrl: { type: String },
   deadline: { type: Date },
 
+  requirementDocumentUrl: { type: String },
+  officialAnnouncementUrl: { type: String },
+
   featuredImage: { type: String },
   tags: [{ type: String }],
   isFeatured: { type: Boolean, default: false },

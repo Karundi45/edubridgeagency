@@ -30,6 +30,8 @@ export default function CreateScholarshipPage() {
     googleFormLink: '',
     whatsappNumber: '',
     logo: '',
+    requirementDocumentUrl: '',
+    officialAnnouncementUrl: '',
     funding: {
       tuition: false,
       accommodation: false,
@@ -55,7 +57,7 @@ export default function CreateScholarshipPage() {
     }));
   };
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, fieldName: 'logo' | 'requirementDocumentUrl' | 'officialAnnouncementUrl' = 'logo') => {
     if (!e.target.files || e.target.files.length === 0) return;
     const file = e.target.files[0];
     
@@ -67,10 +69,10 @@ export default function CreateScholarshipPage() {
       const res = await fetch('/api/upload', { method: 'POST', body: data });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error);
-      setFormData(prev => ({ ...prev, logo: result.url }));
-      toast.success('Poster uploaded successfully');
+      setFormData(prev => ({ ...prev, [fieldName]: result.url }));
+      toast.success('File uploaded successfully');
     } catch (err: any) {
-      toast.error('Failed to upload image: ' + err.message);
+      toast.error('Failed to upload file: ' + err.message);
     } finally {
       setUploading(false);
     }
@@ -108,6 +110,8 @@ export default function CreateScholarshipPage() {
         funding: formData.funding,
         nationality: ['Any'],
         logo: formData.logo,
+        requirementDocumentUrl: formData.requirementDocumentUrl,
+        officialAnnouncementUrl: formData.officialAnnouncementUrl,
         status: 'published',
         isFeatured: false,
         isDemo: false,
@@ -287,6 +291,38 @@ export default function CreateScholarshipPage() {
                 <div className="mt-2 relative w-32 h-32 rounded overflow-hidden border border-border">
                   <img src={formData.logo} alt="Poster preview" className="object-cover w-full h-full" />
                 </div>
+              )}
+            </div>
+
+            <div className="space-y-1">
+              <label className="block text-sm font-medium text-text-secondary">Requirement Document (PDF/Doc)</label>
+              <div className="flex items-center gap-4">
+                <input 
+                  type="file" 
+                  accept=".pdf,.doc,.docx"
+                  onChange={(e) => handleFileUpload(e, 'requirementDocumentUrl')} 
+                  disabled={uploading}
+                  className="w-full text-sm text-text-muted file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-dark"
+                />
+              </div>
+              {formData.requirementDocumentUrl && (
+                <p className="text-sm text-success mt-1">✓ Document uploaded</p>
+              )}
+            </div>
+
+            <div className="space-y-1">
+              <label className="block text-sm font-medium text-text-secondary">Official Announcement (PDF/Doc)</label>
+              <div className="flex items-center gap-4">
+                <input 
+                  type="file" 
+                  accept=".pdf,.doc,.docx"
+                  onChange={(e) => handleFileUpload(e, 'officialAnnouncementUrl')} 
+                  disabled={uploading}
+                  className="w-full text-sm text-text-muted file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-dark"
+                />
+              </div>
+              {formData.officialAnnouncementUrl && (
+                <p className="text-sm text-success mt-1">✓ Document uploaded</p>
               )}
             </div>
           </div>
