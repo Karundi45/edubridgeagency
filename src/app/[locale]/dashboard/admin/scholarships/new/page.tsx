@@ -22,6 +22,7 @@ export default function CreateScholarshipPage() {
     descriptionFr: '',
     type: 'scholarship',
     degree: 'undergraduate',
+    fundingType: 'fully_funded',
     studyMode: 'on_campus',
     officialUrl: '',
     country: '',
@@ -103,7 +104,7 @@ export default function CreateScholarshipPage() {
         deadline: formData.deadline ? new Date(formData.deadline).toISOString() : null,
         degree: [formData.degree],
         field: ['Other'],
-        fundingType: ['fully_funded'],
+        fundingType: [formData.fundingType],
         funding: formData.funding,
         nationality: ['Any'],
         logo: formData.logo,
@@ -206,6 +207,25 @@ export default function CreateScholarshipPage() {
                 <option value="phd">PhD</option>
                 <option value="diploma">Diploma / Associate</option>
                 <option value="certificate">Certificate</option>
+              </select>
+            </div>
+
+            <div className="space-y-1">
+              <label className="block text-sm font-medium text-text-secondary">Funding Type *</label>
+              <select 
+                name="fundingType" 
+                value={formData.fundingType} 
+                onChange={handleChange} 
+                className="w-full h-10 px-3 py-2 bg-white border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                required
+              >
+                <option value="fully_funded">Fully Funded</option>
+                <option value="partially_funded">Partially Funded</option>
+                <option value="tuition_waiver">Tuition Waiver</option>
+                <option value="monthly_stipend">Monthly Stipend</option>
+                <option value="travel_funding">Travel Funding</option>
+                <option value="accommodation">Accommodation</option>
+                <option value="research_funding">Research Funding</option>
               </select>
             </div>
             
