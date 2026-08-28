@@ -57,7 +57,7 @@ export default async function Home() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
             <Image 
-              src="/hero-bg.png"
+              src="/hero-bg.jpg"
               alt="Hero Background"
               fill
               priority

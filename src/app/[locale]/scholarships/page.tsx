@@ -77,7 +77,7 @@ export default async function ScholarshipsPage(props: {
           
           {/* Header & Search */}
           <div className="bg-primary rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
-            <Image src="/hero-bg.png" alt="Background" fill className="object-cover object-center opacity-30 mix-blend-overlay z-0" />
+            <Image src="/hero-bg.jpg" alt="Background" fill className="object-cover object-center opacity-30 mix-blend-overlay z-0" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/4 blur-3xl z-0"></div>
             
             <h1 className="heading-2 mb-2 relative z-10">{t('title')}</h1>
