@@ -2,30 +2,52 @@ import { getTranslations } from 'next-intl/server';
 import { connectToDatabase } from '@/lib/db/mongoose';
 import Job from '@/lib/db/models/Job';
 import Link from 'next/link';
-import { MapPin, Briefcase, Calendar, Search } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { MapPin, Briefcase, Calendar } from 'lucide-react';
+import { JobSearchBar } from '@/components/jobs/JobSearchBar';
+import { JobFiltersSidebar } from '@/components/jobs/JobFiltersSidebar';
 
-export default async function JobsPage(props: { params: Promise<{ locale: string }> }) {
+export default async function JobsPage(props: { 
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const { locale } = await props.params;
+  const searchParams = await props.searchParams;
   const t = await getTranslations('common');
   
   await connectToDatabase();
   
-  // Fetch all published jobs (we can show expired badge on the UI instead of hiding them completely)
-  const matchQuery = {
+  const matchQuery: Record<string, any> = {
     status: 'published'
   };
+  
+  // Apply Search Query
+  const query = searchParams.q as string;
+  if (query) {
+    matchQuery.$text = { $search: query };
+  }
+  
+  // Apply Location/Province Filter
+  const locations = searchParams.location;
+  if (locations) {
+    const locArray = Array.isArray(locations) ? locations : [locations];
+    // We check both province and location fields since users might search for either
+    matchQuery.$or = [
+      { province: { $in: locArray } },
+      { location: { $in: locArray } }
+    ];
+  }
+  
+  // Apply Employment Type Filter
+  const types = searchParams.type;
+  if (types) {
+    const typeArray = Array.isArray(types) ? types : [types];
+    matchQuery.employmentType = { $in: typeArray };
+  }
   
   try {
     const jobsDocs = await Job.find(matchQuery).sort({ isFeatured: -1, createdAt: -1 }).lean();
     const jobs = JSON.parse(JSON.stringify(jobsDocs));
     
-    // Test if jobs mapping throws
-    jobs.map((job: any) => {
-      const type = job.employmentType?.join(', ') || 'Full-time';
-      const title = job.title?.[locale as 'en' | 'fr'] || job.title?.en;
-    });
-
     return (
       <div className="min-h-screen bg-surface-alt">
       {/* Hero Section */}
@@ -36,56 +58,14 @@ export default async function JobsPage(props: { params: Promise<{ locale: string
             Discover career opportunities from top companies, NGOs, and organizations in Rwanda.
           </p>
           
-          <div className="max-w-3xl mx-auto mt-8 flex gap-2">
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input 
-                type="text" 
-                placeholder="Search job titles, companies, or keywords..." 
-                className="w-full pl-10 pr-4 py-3 rounded-xl text-slate-900 border-none focus:ring-2 focus:ring-accent outline-none"
-              />
-            </div>
-            <Button size="lg" className="px-8 rounded-xl bg-accent text-white hover:bg-accent-dark">
-              Search
-            </Button>
-          </div>
+          <JobSearchBar />
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
         
         {/* Filters Sidebar */}
-        <aside className="w-full md:w-64 shrink-0 space-y-6">
-          <div className="bg-white p-5 rounded-2xl shadow-sm border border-border">
-            <h3 className="font-bold text-lg mb-4">Filters</h3>
-            
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-semibold text-text-muted mb-2">Location</h4>
-                <div className="space-y-2">
-                  {['Kigali', 'Remote', 'Northern Province', 'Southern Province', 'Eastern Province', 'Western Province'].map(loc => (
-                    <label key={loc} className="flex items-center gap-2 cursor-pointer group">
-                      <input type="checkbox" className="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" />
-                      <span className="text-sm text-text-secondary group-hover:text-primary transition-colors">{loc}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="pt-4 border-t border-border">
-                <h4 className="text-sm font-semibold text-text-muted mb-2">Employment Type</h4>
-                <div className="space-y-2">
-                  {['Full-time', 'Part-time', 'Contract', 'Internship'].map(type => (
-                    <label key={type} className="flex items-center gap-2 cursor-pointer group">
-                      <input type="checkbox" className="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" />
-                      <span className="text-sm text-text-secondary group-hover:text-primary transition-colors">{type}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
+        <JobFiltersSidebar />
 
         {/* Job Listings */}
         <div className="flex-1 space-y-4">
