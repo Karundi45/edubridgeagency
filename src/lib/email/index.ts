@@ -1,8 +1,21 @@
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM = `${process.env.EMAIL_FROM_NAME || 'EduBridge Agency'} <${process.env.EMAIL_FROM || 'noreply@edubridge-agency.com'}>`;
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+
+// Custom wrapper to replace the resend NPM package and fix peer dependency crashes forever
+async function sendResendEmail(payload: { from: string, to: string, subject: string, html: string }) {
+  if (!process.env.RESEND_API_KEY) {
+    console.warn('RESEND_API_KEY missing. Email not sent:', payload.subject);
+    return;
+  }
+  await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  }).catch(err => console.error('Failed to send email:', err));
+}
 
 // ============================================================
 // Base HTML Template
@@ -63,7 +76,7 @@ export async function sendWelcomeEmail(to: string, name: string): Promise<void> 
     <p style="color:#64748B;font-size:14px;">Complete your profile to get personalized scholarship recommendations.</p>
   `;
 
-  await resend.emails.send({
+  await sendResendEmail({
     from: FROM,
     to,
     subject: `Welcome to EduBridge Agency, ${name}!`,
@@ -84,7 +97,7 @@ export async function sendPasswordResetEmail(to: string, resetLink: string): Pro
     <p style="color:#94A3B8;font-size:12px;word-break:break-all;">Or copy this link: ${resetLink}</p>
   `;
 
-  await resend.emails.send({
+  await sendResendEmail({
     from: FROM,
     to,
     subject: 'Reset your EduBridge Agency password',
@@ -104,7 +117,7 @@ export async function sendEmailVerification(to: string, verifyLink: string): Pro
     <p style="color:#64748B;font-size:14px;">This link expires in 24 hours.</p>
   `;
 
-  await resend.emails.send({
+  await sendResendEmail({
     from: FROM,
     to,
     subject: 'Verify your EduBridge Agency email',
@@ -139,7 +152,7 @@ export async function sendDeadlineReminder(
     </p>
   `;
 
-  await resend.emails.send({
+  await sendResendEmail({
     from: FROM,
     to,
     subject: `⏰ ${daysLeft} day${daysLeft !== 1 ? 's' : ''} left: ${scholarshipName}`,
@@ -170,7 +183,7 @@ export async function sendNewMatchingOpportunity(
     </p>
   `;
 
-  await resend.emails.send({
+  await sendResendEmail({
     from: FROM,
     to,
     subject: `🎯 New scholarship match: ${opportunity.title}`,

@@ -1,9 +1,7 @@
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY || 're_dummy');
 const fromEmail = process.env.EMAIL_FROM || 'noreply@edubridge-agency.com';
 const fromName = process.env.EMAIL_FROM_NAME || 'EduBridge Agency';
 
+// Lightweight Resend API Wrapper without node_modules overhead
 export async function sendEmail({
   to,
   subject,
@@ -21,17 +19,26 @@ export async function sendEmail({
       return { success: false, error: 'API key not configured' };
     }
 
-    const { data, error } = await resend.emails.send({
-      from: `${fromName} <${fromEmail}>`,
-      to,
-      subject,
-      html,
-      text: text || html.replace(/<[^>]*>?/gm, ''), // fallback strip html
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: `${fromName} <${fromEmail}>`,
+        to: Array.isArray(to) ? to : [to],
+        subject,
+        html,
+        text: text || html.replace(/<[^>]*>?/gm, ''), // fallback strip html
+      })
     });
 
-    if (error) {
-      console.error('Resend Error:', error);
-      return { success: false, error: error.message };
+    const data = await res.json();
+
+    if (!res.ok) {
+      console.error('Resend Error:', data);
+      return { success: false, error: data.message || 'Unknown error' };
     }
 
     return { success: true, data };
