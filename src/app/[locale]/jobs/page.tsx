@@ -11,14 +11,9 @@ export default async function JobsPage(props: { params: Promise<{ locale: string
   
   await connectToDatabase();
   
-  // Fetch only published jobs that haven't expired
+  // Fetch all published jobs (we can show expired badge on the UI instead of hiding them completely)
   const matchQuery = {
-    status: 'published',
-    $or: [
-      { deadline: { $exists: false } },
-      { deadline: null },
-      { deadline: { $gte: new Date() } }
-    ]
+    status: 'published'
   };
   
   try {

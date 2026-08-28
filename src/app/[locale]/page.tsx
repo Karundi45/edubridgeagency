@@ -30,8 +30,7 @@ export default async function Home() {
   // Fetch featured Jobs
   const jobDocs = await Job.find({ 
     status: 'published', 
-    isFeatured: true,
-    $or: [{ deadline: { $gte: new Date() } }, { deadline: null }]
+    isFeatured: true
   })
   .sort({ createdAt: -1 })
   .limit(3)
