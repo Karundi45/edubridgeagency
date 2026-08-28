@@ -61,7 +61,7 @@ export default async function Home() {
               alt="Hero Background"
               fill
               priority
-              className="object-cover object-center animate-slow-zoom"
+              className="object-cover object-center animate-slow-zoom opacity-40 mix-blend-overlay"
             />
           </div>
           {/* Removed Overlay as per user request */}

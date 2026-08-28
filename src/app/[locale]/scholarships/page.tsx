@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import { connectToDatabase } from '@/lib/db/mongoose';
 import Opportunity from '@/lib/db/models/Opportunity';
 import Navbar from '@/components/layout/Navbar';
@@ -76,7 +77,8 @@ export default async function ScholarshipsPage(props: {
           
           {/* Header & Search */}
           <div className="bg-primary rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/4 blur-3xl"></div>
+            <Image src="/hero-bg.png" alt="Background" fill className="object-cover object-center opacity-30 mix-blend-overlay z-0" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/4 blur-3xl z-0"></div>
             
             <h1 className="heading-2 mb-2 relative z-10">{t('title')}</h1>
             <p className="text-blue-100 mb-6 relative z-10">{t('subtitle')}</p>

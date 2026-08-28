@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { connectToDatabase } from '@/lib/db/mongoose';
 import Job from '@/lib/db/models/Job';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Briefcase, Calendar } from 'lucide-react';
 import { JobSearchBar } from '@/components/jobs/JobSearchBar';
 import { JobFiltersSidebar } from '@/components/jobs/JobFiltersSidebar';
@@ -51,8 +52,9 @@ export default async function JobsPage(props: {
     return (
       <div className="min-h-screen bg-surface-alt">
       {/* Hero Section */}
-      <div className="bg-primary text-white py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center space-y-4">
+      <div className="bg-primary text-white py-16 px-4 relative overflow-hidden">
+        <Image src="/hero-bg.png" alt="Background" fill className="object-cover object-center opacity-30 mix-blend-overlay z-0" />
+        <div className="max-w-6xl mx-auto text-center space-y-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold">Jobs in Rwanda</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Discover career opportunities from top companies, NGOs, and organizations in Rwanda.
