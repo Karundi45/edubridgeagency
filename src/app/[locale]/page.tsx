@@ -53,22 +53,23 @@ export default async function Home() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden relative">
           {/* Background Image */}
-          <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950">
+          <div className="absolute inset-0 z-0 overflow-hidden">
             <Image 
               src="/hero-bg.jpg"
               alt="Hero Background"
               fill
               priority
-              className="object-cover object-center animate-slow-zoom opacity-40 mix-blend-overlay"
+              className="object-cover object-center animate-slow-zoom"
             />
+            {/* Add a subtle dark gradient at the bottom so the search bar and badges remain readable */}
+            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
           </div>
-          {/* Removed Overlay as per user request */}
           
-          <div className="max-w-7xl mx-auto relative z-20 text-center drop-shadow-md">
-            <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
+          <div className="max-w-7xl mx-auto relative z-20 text-center drop-shadow-md pt-32">
+            <h1 className="sr-only">
               {t('hero.headline')}
             </h1>
-            <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="sr-only">
               {t('hero.subheadline')}
             </p>
             
