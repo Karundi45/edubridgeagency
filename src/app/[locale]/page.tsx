@@ -51,14 +51,15 @@ export default async function Home() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden relative">
+        <section className="min-h-[600px] pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden relative flex flex-col justify-end">
           {/* Background Image */}
-          <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950/20">
             <Image 
               src="/hero-bg.jpg"
               alt="Hero Background"
               fill
               priority
+              unoptimized={true}
               className="object-cover object-center animate-slow-zoom"
             />
             {/* Add a subtle dark gradient at the bottom so the search bar and badges remain readable */}

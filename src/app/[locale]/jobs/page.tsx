@@ -53,7 +53,7 @@ export default async function JobsPage(props: {
       <div className="min-h-screen bg-surface-alt">
       {/* Hero Section */}
       <div className="bg-primary text-white py-16 px-4 relative overflow-hidden">
-        <Image src="/hero-bg.jpg" alt="Background" fill className="object-cover object-center opacity-30 mix-blend-overlay z-0" />
+        <Image src="/hero-bg.jpg" alt="Background" fill unoptimized={true} className="object-cover object-center opacity-30 mix-blend-overlay z-0" />
         <div className="max-w-6xl mx-auto text-center space-y-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold">Jobs in Rwanda</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
