@@ -17,20 +17,18 @@ export default async function Home() {
   
   await connectToDatabase();
   
-  // Fetch featured opportunities (Scholarships)
+  // Fetch latest opportunities (Scholarships) to appear in featured section
   const docs = await Opportunity.find({ 
-    status: 'published', 
-    isFeatured: true,
+    status: 'published',
     $or: [{ deadline: { $gte: new Date() } }, { deadline: null }]
   })
   .sort({ createdAt: -1 })
   .limit(3)
   .lean();
 
-  // Fetch featured Jobs
+  // Fetch latest Jobs to appear in featured section
   const jobDocs = await Job.find({ 
-    status: 'published', 
-    isFeatured: true
+    status: 'published'
   })
   .sort({ createdAt: -1 })
   .limit(3)
