@@ -51,26 +51,26 @@ export default async function Home() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="min-h-[600px] pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden relative flex flex-col justify-end">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0 overflow-hidden bg-blue-950/20">
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden relative">
+          {/* Background Image with strong blue overlay */}
+          <div className="absolute inset-0 z-0 overflow-hidden bg-[#1E3A8A]">
             <Image 
               src="/hero-bg.jpg"
               alt="Hero Background"
               fill
               priority
               unoptimized={true}
-              className="object-cover object-center animate-slow-zoom"
+              className="object-cover object-center opacity-40 mix-blend-overlay"
             />
-            {/* Add a subtle dark gradient at the bottom so the search bar and badges remain readable */}
-            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            {/* Additional gradient to ensure text readability */}
+            <div className="absolute inset-0 bg-blue-950/60 z-10"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto relative z-20 text-center drop-shadow-md pt-32">
-            <h1 className="sr-only">
+          <div className="max-w-7xl mx-auto relative z-20 text-center drop-shadow-md pt-12">
+            <h1 className="heading-1 mb-6 max-w-4xl mx-auto animate-fade-in-up">
               {t('hero.headline')}
             </h1>
-            <p className="sr-only">
+            <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               {t('hero.subheadline')}
             </p>
             
