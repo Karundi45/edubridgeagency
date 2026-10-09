@@ -101,6 +101,7 @@ export default async function RootLayout({
         <meta name="theme-color" content="#1E40AF" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5067958720795745" crossOrigin="anonymous"></script>
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
